@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$6LaFgErFSqiRaaGrqPm0LOnVsmwLwFBl.82GR8bkB5q1xv4gXkZb2",
+      "id": 1
+    }
+  ],
+  "mascota":[
+    {
+      "id":1,
+      "especie_id":1,
+      "usuario_id":1,
+      "nombre":"Felix",
+      "fecha_nacimiento":"14/02/2000",
+      "peso":5,
+      "esterelizado": true
+    }
+  ],
+  "especie":[
+    {
+      "id": 1,
+      "tipo":"gato"
+    },
+    {
+      "id":2,
+      "tipo": "perro"
+    }
+  ],
+  "combo":[
+    {
+      "id":1,
+      "mascota_id":1,
+      "alimento":2.5,
+      "complemento": 1,
+      "complemento_extra":true
+    }
+  ]
+}
