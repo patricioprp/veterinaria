@@ -4,7 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+Para  instalar las dependencias correr:
+
+### `npm install`
+
+Abrir una instancia del proyecto y levantar el servidor fake con el siguiente comando:
+
+### `npx json-server db.json -m ./node_modules/json-server-auth`
+
+Abrir otra instancia del proyecto y correr:
 
 ### `npm start`
 
