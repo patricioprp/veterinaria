@@ -90,12 +90,11 @@ const Login = () => {
                 </div>
 
                 <div className='campo-form'>
-                    <label htmlform="domain">Dominio</label>
-                    <select type="text" id="domain" name="domain" onChange={onChange}>
-                        <option value="">---Seleccione un Dominio---</option>
-                        <option value="allus.ar">allus</option>
-                        <option value="alcomovistar.com.ar">alcomovistar</option>
-                        <option value="grupotyt.com.ar">grupotyt</option>
+                    <label htmlform="type">Perfil de Usuario</label>
+                    <select type="text" id="type" name="type" onChange={onChange}>
+                        <option value="">---Tipo de Usuario---</option>
+                        <option value="1">Cliente</option>
+                        <option value="2">Vendedor</option>
                     </select>
                 </div>
 

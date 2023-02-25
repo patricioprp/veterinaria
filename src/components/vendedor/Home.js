@@ -1,9 +1,9 @@
 import React, {useContext,useEffect} from 'react';
-import Sidebar from '../../layaout/Sidebar';
-import Barra from '../../layaout/Barra';
+import Sidebar from '../layaout/Sidebar';
+import Barra from '../layaout/Barra';
 // import FormTarea from '../../../components/supervisor/tareas/FormTarea';
 // import ListadoTarea from '../../supervisor/tareas/ListadoTarea';
-import AuthContext from '../../../context/autenticacion/authContext';
+import AuthContext from '../../context/autenticacion/authContext';
 
 const Home = () => {
     //Extraer la informacion de autenticacion
