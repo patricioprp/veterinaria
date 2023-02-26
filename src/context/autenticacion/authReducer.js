@@ -37,8 +37,6 @@ export default (state,action) => {
         case REGISTRO_ERROR:
             localStorage.removeItem('token');
             localStorage.removeItem('username');
-            localStorage.removeItem('domain');
-            localStorage.removeItem('refresh_token');
             return{
                 ...state,
                 token: null,

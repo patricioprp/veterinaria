@@ -4,58 +4,69 @@
       "email": "olivier@mail.com",
       "password": "$2a$10$6LaFgErFSqiRaaGrqPm0LOnVsmwLwFBl.82GR8bkB5q1xv4gXkZb2",
       "id": 1,
-      "tipo":1
-    }
-  ],
-  "usuario_tipo":[
-    {
-      "id":1,
-      "nombre":"cliente"
+      "tipo": 1
     },
     {
-      "id":2,
-      "nombre":"vendedor"
+      "email": "gaston@gmail.com",
+      "password": "$2a$10$ofuWdfwLIfTJ0kAEuEzI5.ete4AD1mjrQKc22aY6dio3u1/cPrx5q",
+      "id": 2
+    },
+    {
+      "email": "gaston2@gmail.com",
+      "password": "$2a$10$BppLBfmeP3cKp4doIuYHZORkAqxrtjQSjPccCazhtWOa0Sa9wP6BW",
+      "type": 1,
+      "id": 3
     }
   ],
-  "mascota":[
+  "usuario_tipo": [
     {
-      "id":1,
-      "especie_id":1,
-      "usuario_id":1,
-      "nombre":"Felix",
-      "fecha_nacimiento":"14/02/2000",
-      "peso":5,
+      "id": 1,
+      "nombre": "cliente"
+    },
+    {
+      "id": 2,
+      "nombre": "vendedor"
+    }
+  ],
+  "mascota": [
+    {
+      "id": 1,
+      "especie_id": 1,
+      "usuario_id": 1,
+      "nombre": "Felix",
+      "fecha_nacimiento": "14/02/2000",
+      "peso": 5,
       "esterelizado": true
     }
   ],
-  "especie":[
+  "especie": [
     {
       "id": 1,
-      "tipo":"gato"
+      "tipo": "gato"
     },
     {
-      "id":2,
+      "id": 2,
       "tipo": "perro"
     }
   ],
-  "combo":[
+  "combo": [
     {
-      "id":1,
-      "mascota_id":1,
-      "alimento":2.5,
+      "id": 1,
+      "mascota_id": 1,
+      "alimento": 2.5,
       "complemento": 1,
-      "complemento_extra":true,
-      "estado_id":1
+      "complemento_extra": true,
+      "estado_id": 1
     }
   ],
-  "estado_pedido":[
+  "estado_pedido": [
     {
-      "id":1,
-      "estado":"pendiente"
+      "id": 1,
+      "estado": "pendiente"
     },
     {
-      "id":2,
-      "estado":"despachado"
+      "id": 2,
+      "estado": "despachado"
     }
   ]
 }

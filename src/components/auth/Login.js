@@ -7,7 +7,7 @@ import alertaContext from '../../context/alertas/alertaContext';
 const Login = () => {
 
     const authContext =  useContext(AuthContext);
-    const {mensaje,autenticado,iniciarSesion,perfil,uri,usuario} = authContext; 
+    const {mensaje,autenticado,iniciarSesion,uri,usuario} = authContext; 
     
     const alertasContext = useContext(alertaContext);
     const {alerta,mostrarAlerta} = alertasContext;
@@ -17,7 +17,6 @@ const Login = () => {
     useEffect( () => {
  // falta ver que cuando se ponga manualmente las rutas redireccione a su perfil correspondiente
         if(usuario){
-            perfil(usuario.car_id) ;
             if(autenticado && uri){
                 history(uri);   
           }
@@ -30,13 +29,11 @@ const Login = () => {
     },[mensaje,autenticado,history,uri,usuario]);
 
     const [user,guardarUser] =  useState({
-        username:'',
-        password:'',
-        domain:'',
-        grant_type:"password"
+        email:'',
+        password:''
     });
 
-    const {username,password,domain,grant_type} = user;
+    const {email,password} = user;
 
     const onChange = e =>{
         guardarUser({
@@ -47,12 +44,12 @@ const Login = () => {
 
     const onSubmit = e =>{
         e.preventDefault();
-        if(username.trim() === '' || password.trim() === '' || domain.trim() === ''){
+        if(email.trim() === '' || password.trim() === ''){
             mostrarAlerta('Todos los campos son obligatorios','alerta-error');
             return
         }
-        iniciarSesion({username,password,domain,grant_type});
-        // console.log(username,password,domain);
+        iniciarSesion({email,password});
+         //console.log(username,password);
     }
 
 
@@ -66,14 +63,14 @@ const Login = () => {
             onSubmit={onSubmit}
             >
                 <div className='campo-form'>
-                    <label htmlform="username">Usuario</label>
+                    <label htmlform="email">Email</label>
                     <input
                     type="text"
-                    id="username"
-                    name="username"
-                    placeholder='Tu Usuario'
+                    id="email"
+                    name="email"
+                    placeholder='Tu Email'
                     onChange={onChange}
-                    value={username}
+                    value={email}
                     />
                 </div>
 
@@ -87,15 +84,6 @@ const Login = () => {
                     onChange={onChange}
                     value={password}
                     />
-                </div>
-
-                <div className='campo-form'>
-                    <label htmlform="type">Perfil de Usuario</label>
-                    <select type="text" id="type" name="type" onChange={onChange}>
-                        <option value="">---Tipo de Usuario---</option>
-                        <option value="1">Cliente</option>
-                        <option value="2">Vendedor</option>
-                    </select>
                 </div>
 
                 <div className='campo-form'>

@@ -2,10 +2,9 @@ import React,{useReducer} from "react";
 import authContext from "./authContext";
 import authReducer from "./authReducer";
 import clienteAxios from "../../config/axios";
-import clienteAxiosResource from "../../config/axiosResource";
-import tokenAuth from "../../config/token";
-import jwt_decode from "jwt-decode";
-import moment from 'moment';
+// import tokenAuth from "../../config/token";
+// import jwt_decode from "jwt-decode";
+// import moment from 'moment';
 
 import {
 
@@ -58,36 +57,21 @@ const AuthState = props => {
     };
 
     const usuarioAutenticado = async () => {
-        const token = localStorage.getItem('token');
-        const username = localStorage.getItem('username');
-        const domain = localStorage.getItem('domain');
-        if(token){
-            tokenAuth(token);
-        }
-            try {
-
-                const respuesta = await clienteAxiosResource.get(`/get?userName=${username}&domainName=${domain}`);
-                dispatch({
-                    type: OBTENER_USUARIO,
-                    payload: respuesta.data
-                });
-    
-            } catch (error) {
-                console.log('error',error.response);
-                dispatch({
-                    type:LOGIN_ERROR
-                });
-            }
-
+        const email = localStorage.getItem('email');
+        dispatch({
+            type: OBTENER_USUARIO,
+            payload: email
+        });
     }
 
     const iniciarSesion = async datos => {
         try {
-            const respuesta = await clienteAxios.post('/api/meucci/auth',datos);
-            localStorage.setItem('token',respuesta.data.token)
-            localStorage.setItem('username', datos.username);
-            localStorage.setItem('domain', datos.domain);
-            localStorage.setItem('refresh_token',respuesta.data.refresh_token);
+            const respuesta = await clienteAxios.post('/login',datos);
+            console.log(respuesta.data.user)
+            localStorage.setItem('token',respuesta.data.accessToken)
+            localStorage.setItem('email', respuesta.user.email);
+            //  localStorage.setItem('type', respuesta.user.type);
+            // localStorage.setItem('refresh_token',respuesta.data.refresh_token);
 
             // const token = jwt_decode(respuesta.data.token);
             // console.log('exp',token.exp,respuesta.data.token,moment.unix(token.exp).format('DD MM YYYY hh:mm:ss'));
@@ -98,10 +82,10 @@ const AuthState = props => {
             // console.log(now < tokenExp)
             dispatch({
                 type: LOGIN_EXITOSO,
-                payload: respuesta.data
+                payload: respuesta.data.user
             });
 
-        usuarioAutenticado(); 
+        // usuarioAutenticado(); 
         
         } catch (error) {
             console.log('error de session',error.response.data);
