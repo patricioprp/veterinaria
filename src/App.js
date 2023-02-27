@@ -20,14 +20,14 @@ function App() {
               <Route exact path="/" element={<Login />} />
 
               { 
-                  <Route exact path="/monitoreos/vendedor" element={
+                  <Route exact path="/home/vendedor" element={
                       <RutaPrivada>
                         <HomeVendedor />
                       </RutaPrivada>
                     } >
                     </Route>
               }
-              { <Route exact path="/monitoreos/cliente" element={
+              { <Route exact path="/home/cliente" element={
                 <RutaPrivada>
                   <HomeCliente />
                 </RutaPrivada>

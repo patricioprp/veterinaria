@@ -14,9 +14,8 @@ import {
     REGISTRO_ERROR,
     REGISTRO_EXITOSO,
     OBTENER_USUARIO,
-    ES_INVITADO,
-    ES_SUPERVISOR,
-    ES_OPERADOR
+    ES_CLIENTE,
+    ES_VENDEDOR
 
 } from '../../types'
 
@@ -42,7 +41,7 @@ const AuthState = props => {
                 type:REGISTRO_EXITOSO,
                 payload:respuesta.data
             });    
-            // usuarioAutenticado();        
+             usuarioAutenticado();        
         } catch (error) {
             console.log(error);
             const alerta = {
@@ -57,38 +56,28 @@ const AuthState = props => {
     };
 
     const usuarioAutenticado = async () => {
-        const email = localStorage.getItem('email');
+        const user = localStorage.getItem('user');
         dispatch({
             type: OBTENER_USUARIO,
-            payload: email
+            payload: user
         });
     }
 
     const iniciarSesion = async datos => {
         try {
             const respuesta = await clienteAxios.post('/login',datos);
-            console.log(respuesta.data.user)
             localStorage.setItem('token',respuesta.data.accessToken)
-            localStorage.setItem('email', respuesta.user.email);
-            //  localStorage.setItem('type', respuesta.user.type);
-            // localStorage.setItem('refresh_token',respuesta.data.refresh_token);
-
-            // const token = jwt_decode(respuesta.data.token);
-            // console.log('exp',token.exp,respuesta.data.token,moment.unix(token.exp).format('DD MM YYYY hh:mm:ss'));
-            // const tokenExp = moment.unix(token.exp).format('DD MM YYYY hh:mm:ss');
-            // var now = moment().format('DD MM YYYY hh:mm:ss');
-            // console.log(tokenExp,now,moment(tokenExp).isSameOrAfter(now,'hours'));
-            // console.log(now,tokenExp,moment(now).isSameOrAfter(tokenExp,'hours'));
-            // console.log(now < tokenExp)
+            localStorage.setItem('user', JSON.stringify(respuesta.data.user));
+            console.log(respuesta.data.user.email)
             dispatch({
                 type: LOGIN_EXITOSO,
-                payload: respuesta.data.user
+                payload: respuesta.data
             });
 
-        // usuarioAutenticado(); 
+          usuarioAutenticado(); 
         
         } catch (error) {
-            console.log('error de session',error.response.data);
+            console.log('error de session',error);
             const alerta = {
                 msg: error.response.data,
                 categoria: 'alerta-error'
@@ -100,43 +89,27 @@ const AuthState = props => {
         }
     }
 
-    const perfil = (card_id) =>{
+    const perfil = (tipo_id) =>{
 
-        const operador = [5,67,101,207,221];
-        const supervisor = [6,14,72,93,99,40,161];
-    
-        let is_operador = operador.find(element => element === card_id)
-        let is_supervisor = supervisor.find(element => element === card_id)
-    
-        if(is_supervisor){
+
+        if(tipo_id === 1){
             const set_perfil = {
-                uri: '/monitoreos/supervisor',
-                user_type: 'supervisor'
+                uri: '/home/cliente',
+                user_type: 1
             }
             dispatch({
-                type:ES_SUPERVISOR,
+                type:ES_CLIENTE,
                 payload:set_perfil
             });
         }else {
-            if(is_operador){
-                const set_perfil = {
-                    uri: '/monitoreos/operador',
-                    user_type: 'operador'
-                }
-                dispatch({
-                    type: ES_OPERADOR,
-                    payload: set_perfil   
-                });
-            }else{
-                const set_perfil = {
-                    uri: '/invitado',
-                    user_type: 'invitado'
-                }
-                dispatch({
-                    type: ES_INVITADO,
-                    payload: set_perfil
-                });
+            const set_perfil = {
+                uri: '/home/vendedor',
+                user_type: 2
             }
+            dispatch({
+                type: ES_VENDEDOR,
+                payload: set_perfil
+            });
          }
     }
 

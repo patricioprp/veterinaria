@@ -6,9 +6,8 @@ import {
     REGISTRO_ERROR,
     REGISTRO_EXITOSO,
     OBTENER_USUARIO,
-    ES_INVITADO,
-    ES_SUPERVISOR,
-    ES_OPERADOR
+    ES_VENDEDOR,
+    ES_CLIENTE
 
 } from '../../types'
 
@@ -23,20 +22,23 @@ export default (state,action) => {
                 ...state,
                 autenticado:true,
                 mensaje:null,
+                usuario: 'patricio', 
+                user_type: 2,
                 cargando: false
             }
             case OBTENER_USUARIO: 
             return {
                 ...state,
                 autenticado: true,
-                usuario: action.payload, 
+                usuario: 'patricio', 
+                user_type: 2,
                 cargando: false
             }
         case CERRAR_SESION:
         case LOGIN_ERROR:
         case REGISTRO_ERROR:
             localStorage.removeItem('token');
-            localStorage.removeItem('username');
+            localStorage.removeItem('email');
             return{
                 ...state,
                 token: null,
@@ -44,11 +46,11 @@ export default (state,action) => {
                 autenticado: null,
                 mensaje:action.payload,
                 cargando: false,
-                uri: null
+                uri: null,
+                user_type: null
             }
-        case ES_INVITADO:
-        case ES_OPERADOR:
-        case ES_SUPERVISOR:
+        case ES_VENDEDOR:
+        case ES_CLIENTE:
             return{
                 ...state,
                 uri: action.payload.uri,

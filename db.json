@@ -4,12 +4,13 @@
       "email": "olivier@mail.com",
       "password": "$2a$10$6LaFgErFSqiRaaGrqPm0LOnVsmwLwFBl.82GR8bkB5q1xv4gXkZb2",
       "id": 1,
-      "tipo": 1
+      "type": 1
     },
     {
       "email": "gaston@gmail.com",
       "password": "$2a$10$ofuWdfwLIfTJ0kAEuEzI5.ete4AD1mjrQKc22aY6dio3u1/cPrx5q",
-      "id": 2
+      "id": 2,
+      "type":2
     },
     {
       "email": "gaston2@gmail.com",

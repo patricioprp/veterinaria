@@ -20,7 +20,7 @@ const Home = () => {
             <div className='seccion-principal'>
                 <Barra />
                 <main>
-                    aqui va el datatable de monitoreos para supervisores
+                    aqui va el datatable de vendedor
                 {/* <FormTarea />
                     <div className='contenedor-tareas'>
                         <ListadoTarea />
