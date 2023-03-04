@@ -1,22 +1,10 @@
 {
   "users": [
     {
-      "email": "olivier@mail.com",
-      "password": "$2a$10$6LaFgErFSqiRaaGrqPm0LOnVsmwLwFBl.82GR8bkB5q1xv4gXkZb2",
-      "id": 1,
-      "type": 1
-    },
-    {
-      "email": "gaston@gmail.com",
-      "password": "$2a$10$ofuWdfwLIfTJ0kAEuEzI5.ete4AD1mjrQKc22aY6dio3u1/cPrx5q",
-      "id": 2,
-      "type":2
-    },
-    {
       "email": "gaston2@gmail.com",
-      "password": "$2a$10$BppLBfmeP3cKp4doIuYHZORkAqxrtjQSjPccCazhtWOa0Sa9wP6BW",
+      "password": "$2a$10$0QH8wq1cVHCmMX1KMCgAsefKDtEEl3ntQfWv/FWQMOCF7Lg5l1Mty",
       "type": 1,
-      "id": 3
+      "id": 1
     }
   ],
   "usuario_tipo": [

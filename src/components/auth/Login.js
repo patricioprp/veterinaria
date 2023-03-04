@@ -7,7 +7,7 @@ import alertaContext from '../../context/alertas/alertaContext';
 const Login = () => {
 
     const authContext =  useContext(AuthContext);
-    const {mensaje,perfil,autenticado,iniciarSesion,uri,usuario,user_type} = authContext; 
+    const {mensaje,perfil,autenticado,iniciarSesion,uri,usuario,user_tipo} = authContext; 
     
     const alertasContext = useContext(alertaContext);
     const {alerta,mostrarAlerta} = alertasContext;
@@ -17,7 +17,7 @@ const Login = () => {
     useEffect( () => {
  // falta ver que cuando se ponga manualmente las rutas redireccione a su perfil correspondiente
         if(usuario){
-            perfil(user_type)
+            perfil(user_tipo)
             if(autenticado && uri){
                 history(uri);   
           }

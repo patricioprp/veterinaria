@@ -13,25 +13,29 @@ import {
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state,action) => {
+    debugger
     switch(action.type){
 
         case REGISTRO_EXITOSO:
         case LOGIN_EXITOSO:
-            //  localStorage.setItem('token', action.payload.token);
+            //  localStorage.setItem('token', action.payload.token)
+            // console.log('state-reducer',action.payload.email,action.payload.type,action.payload.id)
+
             return{
                 ...state,
                 autenticado:true,
                 mensaje:null,
-                usuario: 'patricio', 
-                user_type: 2,
-                cargando: false
+                usuario: action.payload.email, 
+                user_tipo: action.payload.type,
+                cargando: false,
+                user_id: action.payload.id
             }
             case OBTENER_USUARIO: 
             return {
                 ...state,
                 autenticado: true,
-                usuario: 'patricio', 
-                user_type: 2,
+                usuario: JSON.parse(action.payload).email, 
+                user_tipo: JSON.parse(action.payload).type,
                 cargando: false
             }
         case CERRAR_SESION:
@@ -47,14 +51,15 @@ export default (state,action) => {
                 mensaje:action.payload,
                 cargando: false,
                 uri: null,
-                user_type: null
+                user_tipo: null,
+                user_id: null
             }
         case ES_VENDEDOR:
         case ES_CLIENTE:
             return{
                 ...state,
                 uri: action.payload.uri,
-                user_type: action.payload.user_type
+                user_tipo: action.payload.user_tipo
             }
         default:
             return state;

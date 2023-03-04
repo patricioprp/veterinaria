@@ -28,7 +28,8 @@ const AuthState = props => {
         mensaje: null,
         cargando: true,
         uri: null,
-        user_type: null
+        user_tipo: null,
+        user_id: null
     }
 
     const [state,dispatch] = useReducer(authReducer,initialState);
@@ -41,7 +42,7 @@ const AuthState = props => {
                 type:REGISTRO_EXITOSO,
                 payload:respuesta.data
             });    
-             usuarioAutenticado();        
+            //  usuarioAutenticado();        
         } catch (error) {
             console.log(error);
             const alerta = {
@@ -68,13 +69,13 @@ const AuthState = props => {
             const respuesta = await clienteAxios.post('/login',datos);
             localStorage.setItem('token',respuesta.data.accessToken)
             localStorage.setItem('user', JSON.stringify(respuesta.data.user));
-            console.log(respuesta.data.user.email)
+debugger
             dispatch({
                 type: LOGIN_EXITOSO,
-                payload: respuesta.data
+                payload: respuesta.data.user
             });
 
-          usuarioAutenticado(); 
+        //   usuarioAutenticado(); 
         
         } catch (error) {
             console.log('error de session',error);
@@ -95,7 +96,7 @@ const AuthState = props => {
         if(tipo_id === 1){
             const set_perfil = {
                 uri: '/home/cliente',
-                user_type: 1
+                user_tipo: 1
             }
             dispatch({
                 type:ES_CLIENTE,
@@ -104,7 +105,7 @@ const AuthState = props => {
         }else {
             const set_perfil = {
                 uri: '/home/vendedor',
-                user_type: 2
+                user_tipo: 2
             }
             dispatch({
                 type: ES_VENDEDOR,
@@ -129,7 +130,7 @@ const AuthState = props => {
             mensaje: state.mensaje,
             cargando: state.cargando,
             uri: state.uri,
-            user_type: state.user_type,
+            user_tipo: state.user_tipo,
             registrarUsuario,
             usuarioAutenticado,
             iniciarSesion,
