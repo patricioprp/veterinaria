@@ -5,6 +5,8 @@ import Barra from '../layaout/Barra';
 // import ListadoTarea from '../../supervisor/tareas/ListadoTarea';
 import AuthContext from '../../context/autenticacion/authContext';
 
+
+
 const Home = () => {
     //Extraer la informacion de autenticacion
     const authContext = useContext(AuthContext);

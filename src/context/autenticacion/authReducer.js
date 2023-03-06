@@ -13,7 +13,7 @@ import {
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state,action) => {
-    debugger
+    //debugger
     switch(action.type){
 
         case REGISTRO_EXITOSO:
@@ -36,7 +36,7 @@ export default (state,action) => {
                 autenticado: true,
                 usuario: JSON.parse(action.payload).email, 
                 user_tipo: JSON.parse(action.payload).type,
-                cargando: false
+                cargando: false,
             }
         case CERRAR_SESION:
         case LOGIN_ERROR:

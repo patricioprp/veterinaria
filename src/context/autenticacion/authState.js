@@ -42,7 +42,7 @@ const AuthState = props => {
                 type:REGISTRO_EXITOSO,
                 payload:respuesta.data
             });    
-            //  usuarioAutenticado();        
+              usuarioAutenticado();        
         } catch (error) {
             console.log(error);
             const alerta = {
@@ -69,13 +69,13 @@ const AuthState = props => {
             const respuesta = await clienteAxios.post('/login',datos);
             localStorage.setItem('token',respuesta.data.accessToken)
             localStorage.setItem('user', JSON.stringify(respuesta.data.user));
-debugger
+//debugger
             dispatch({
                 type: LOGIN_EXITOSO,
                 payload: respuesta.data.user
             });
 
-        //   usuarioAutenticado(); 
+           usuarioAutenticado(); 
         
         } catch (error) {
             console.log('error de session',error);
