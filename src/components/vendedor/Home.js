@@ -1,30 +1,32 @@
 import React, {useContext,useEffect} from 'react';
 import Sidebar from '../layaout/Sidebar';
 import Barra from '../layaout/Barra';
-// import FormTarea from '../../../components/supervisor/tareas/FormTarea';
-// import ListadoTarea from '../../supervisor/tareas/ListadoTarea';
+import VendedorContext from '../../context/vendedor/vendedorContext';
+import NuevoUsuario from '../vendedor/NuevoUsuario';
+import NuevoPedido from './NuevoPedido';
+import ListadoPedido from './ListadoPedido';
 import AuthContext from '../../context/autenticacion/authContext';
 
 const Home = () => {
     //Extraer la informacion de autenticacion
     const authContext = useContext(AuthContext);
     const {usuarioAutenticado } = authContext;
-
+    //Extrart la informacion de vendedor
+    const vendedorContext = useContext(VendedorContext);
+    const {form_usuario,form_pedido,listado_pedido} =  vendedorContext
     useEffect(() => {
-      usuarioAutenticado()
+       usuarioAutenticado()
     }, [])
-    
+
     return ( 
         <div className='contenedor-app'>
             <Sidebar />
             <div className='seccion-principal'>
                 <Barra />
                 <main>
-                    aqui va el datatable de vendedor
-                {/* <FormTarea />
-                    <div className='contenedor-tareas'>
-                        <ListadoTarea />
-                    </div> */}
+                {form_usuario ? <NuevoUsuario /> : null}
+                {form_pedido ? <NuevoPedido /> : null}
+                {listado_pedido? <ListadoPedido />: null}
                 </main>
             </div>
         </div>

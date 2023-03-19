@@ -3,11 +3,41 @@
     {
       "email": "gaston2@gmail.com",
       "password": "$2a$10$0QH8wq1cVHCmMX1KMCgAsefKDtEEl3ntQfWv/FWQMOCF7Lg5l1Mty",
-      "type": 2,
+      "tipo": 2,
       "id": 1
+    },
+    {
+      "email": "gaston@gmail.com",
+      "password": "$2a$10$hqACUchj/18O3x5hhTLxoeVQm2Ql8RXX7VDZ9ZqJHmld22G8JBmLO",
+      "tipo": 1,
+      "id": 2
+    },
+    {
+      "email": "gaston22@gmail.com",
+      "password": "$2a$10$8qBkJ84l.vja4yp1o7ueXOfvQEIvQzAyDsuboDMmC1y1wamEQogyu",
+      "tipo": "2",
+      "id": 3
+    },
+    {
+      "email": "gaston223@gmail.com",
+      "password": "$2a$10$uQxeyCY2j.Dj226FSE1CvOJa2kLOp2mUjL46FjEEFtnyMJZmFW0Om",
+      "tipo": "2",
+      "id": 4
+    },
+    {
+      "email": "gaston21@gmail.com",
+      "password": "$2a$10$V9TQdGVBw9OEU5D.6Mix7eb/EuBXqTTo/jwPsfwkKC1OFs89WhLcS",
+      "tipo": "2",
+      "id": 5
+    },
+    {
+      "email": "gaston211@gmail.com",
+      "password": "$2a$10$0QBhY6/Ko0XXf8wz2.TJr.hqE9xddLJugfqd.iwynSrQsDvxFwFK2",
+      "tipo": "2",
+      "id": 6
     }
   ],
-  "usuario_tipo": [
+  "usuario_tipos": [
     {
       "id": 1,
       "nombre": "cliente"
@@ -17,7 +47,7 @@
       "nombre": "vendedor"
     }
   ],
-  "mascota": [
+  "mascotas": [
     {
       "id": 1,
       "especie_id": 1,
@@ -28,7 +58,7 @@
       "esterelizado": true
     }
   ],
-  "especie": [
+  "especies": [
     {
       "id": 1,
       "tipo": "gato"
@@ -38,7 +68,7 @@
       "tipo": "perro"
     }
   ],
-  "combo": [
+  "combos": [
     {
       "id": 1,
       "mascota_id": 1,
@@ -48,7 +78,7 @@
       "estado_id": 1
     }
   ],
-  "estado_pedido": [
+  "estados_pedido": [
     {
       "id": 1,
       "estado": "pendiente"

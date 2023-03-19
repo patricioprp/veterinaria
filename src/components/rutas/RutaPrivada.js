@@ -10,7 +10,7 @@ import AuthContext from '../../context/autenticacion/authContext';
     const {autenticado,cargando,usuarioAutenticado} = authContext;
 
     useEffect(() => {
-      usuarioAutenticado()
+       usuarioAutenticado()
        // eslint-disable-next-line
 
     }, [])

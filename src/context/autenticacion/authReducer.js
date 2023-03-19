@@ -7,7 +7,8 @@ import {
     REGISTRO_EXITOSO,
     OBTENER_USUARIO,
     ES_VENDEDOR,
-    ES_CLIENTE
+    ES_CLIENTE,
+    OBTENER_USUARIO_TIPOS
 
 } from '../../types'
 
@@ -47,7 +48,7 @@ export default (state,action) => {
                 ...state,
                 token: null,
                 usuario: null,
-                autenticado: null,
+                autenticado: false,
                 mensaje:action.payload,
                 cargando: false,
                 uri: null,
@@ -60,6 +61,11 @@ export default (state,action) => {
                 ...state,
                 uri: action.payload.uri,
                 user_tipo: action.payload.user_tipo
+            }
+        case OBTENER_USUARIO_TIPOS:
+            return{
+                ...state,
+                usuario_tipos : action.payload
             }
         default:
             return state;
