@@ -4,13 +4,13 @@ import VendedorContext from "../../context/vendedor/vendedorContext";
 const OptionsSlider = () => {
     //Extrart la informacion de vendedor
     const vendedorContext = useContext(VendedorContext);
-    const {mostrarFormUsuario,mostrarFormPedido,mostrarListadoPedido} =  vendedorContext
+    const {mostrarFormUsuario,mostrarFormPedido,mostrarListadoPedido,mostrarListadoUsuario} =  vendedorContext
     return(
         <ul>
-             {/* onClick = { */}
         <li onClick={mostrarFormPedido}>Nuevo Pedido</li>
         <li onClick={mostrarListadoPedido}>Listado de Pedidos</li>
         <li onClick ={mostrarFormUsuario}>Nuevo Usuario</li>
+        <li onClick ={mostrarListadoUsuario}>Listado de Usuarios</li>
     </ul>
     )
 }

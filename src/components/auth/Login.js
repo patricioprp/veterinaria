@@ -2,6 +2,7 @@ import React, {useState,useEffect,useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from '../../context/autenticacion/authContext';
 import alertaContext from '../../context/alertas/alertaContext';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -95,9 +96,9 @@ const Login = () => {
                     />
                 </div>
             </form>
-            {/* <Link to={"/nueva-cuenta"} className='enlace-cuenta'>
+            <Link to={"/nueva-cuenta"} className='enlace-cuenta'>
                 Crear Cuenta
-            </Link> */}
+            </Link>
         </div>
     </div>
     );

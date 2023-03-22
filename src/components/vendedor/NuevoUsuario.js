@@ -1,6 +1,7 @@
 import React, {useContext,useEffect,useState} from "react";
 import alertaContext from "../../context/alertas/alertaContext";
 import AuthContext from "../../context/autenticacion/authContext";
+import VendedorContext from "../../context/vendedor/vendedorContext";
 
 const NuevoUsuario = () => {
 
@@ -8,16 +9,19 @@ const NuevoUsuario = () => {
     const {alerta,mostrarAlerta} = alertasContext;
 
     const authContext = useContext(AuthContext);
-    const {obtenerUsuarioTipos,usuario_tipos,registrarUsuario} = authContext;
+    const {registrarUsuario} = authContext;
 
-    useEffect(() => {
-        obtenerUsuarioTipos()
-    }, [])
+    const vendedorContext = useContext(VendedorContext)
+    const {mostrarListadoUsuario} = vendedorContext;
+
+    // useEffect(() => {
+    //     obtenerUsuarioTipos()
+    // }, [])
 
     const [user,guardarUser] =  useState({
         email:'',
         password:'',
-        tipo:'',
+        tipo:'2',
         confirmar:''
     });
 
@@ -32,7 +36,7 @@ const NuevoUsuario = () => {
 
     const onSubmit = e =>{
         e.preventDefault();
-        if(email.trim() === '' || tipo.trim() === '' || password.trim() === ''  || confirmar.trim() === ''){
+        if(email.trim() === '' || password.trim() === ''  || confirmar.trim() === ''){
             mostrarAlerta('Todos los campos son obligatorios','alerta-error');
             return
         }
@@ -41,6 +45,7 @@ const NuevoUsuario = () => {
             mostrarAlerta('Las contraseñas no coinciden','alerta-error');
             return
         }
+        mostrarListadoUsuario()
         registrarUsuario({email,password,tipo});
     }
 return(
@@ -62,27 +67,6 @@ return(
                     value={email}
                     onChange={onChange}
                 />
-            </div>
-
-            <div className="campo-form">
-                <label htmlFor="tipo">Tipo</label>
-                <select type="number" id="tipo" name="tipo" onChange={onChange}> 
-                <option type="number" name="tipo" value="">Selecccion un tipo de usuario</option>
-
-                    {
-                        usuario_tipos ?
-                        usuario_tipos.map( tipo => (
-                            <option
-                            key={tipo.id}
-                            value={tipo.id}
-                            type="number"
-                            >{tipo.nombre}</option>
-                        ))
-                        : 
-                        null
-                    }
-
-                    </select>
             </div>
 
             <div className="campo-form">

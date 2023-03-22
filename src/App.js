@@ -12,6 +12,7 @@ import RutaPrivada from './components/rutas/RutaPrivada';
 import HomeCliente from './components/cliente/Home';
 import HomeVendedor from './components/vendedor/Home';
 import FormUsuario from './components/vendedor/NuevoUsuario';
+import NuevaCuenta from './components/auth/NuevaCuenta';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route exact path="/" element={<Login />} />
-
+              <Route exact path="/nueva-cuenta" element={<NuevaCuenta />} />
               { 
                   <Route exact path="/home/vendedor" element={
                       <RutaPrivada>

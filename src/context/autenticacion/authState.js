@@ -2,9 +2,7 @@ import React,{useReducer} from "react";
 import authContext from "./authContext";
 import authReducer from "./authReducer";
 import clienteAxios from "../../config/axios";
-// import tokenAuth from "../../config/token";
-// import jwt_decode from "jwt-decode";
-// import moment from 'moment';
+
 
 import {
 
@@ -16,8 +14,7 @@ import {
     OBTENER_USUARIO,
     ES_CLIENTE,
     ES_VENDEDOR,
-    MOSTRAR_FORM_USUARIO,
-    OBTENER_USUARIO_TIPOS
+    // OBTENER_USUARIO_TIPOS
 
 } from '../../types'
 
@@ -32,45 +29,45 @@ const AuthState = props => {
         uri: null,
         user_tipo: null,
         user_id: null,
-        usuario_tipos: null
+        // usuario_tipos: null
     }
 
     const [state,dispatch] = useReducer(authReducer,initialState);
 
+     
+
     const registrarUsuario = async datos => {
         try {
             const respuesta = await clienteAxios.post('/register',datos);
-            // localStorage.setItem('token', respuesta.data.token);
             console.log(respuesta)
-            // dispatch({
-            //     type:REGISTRO_EXITOSO,
-            //     payload:respuesta.data
-            // });    
-            //   usuarioAutenticado();        
+            dispatch({
+                type:REGISTRO_EXITOSO,
+                payload:respuesta.data
+            });          
         } catch (error) {
             console.log(error);
-            // const alerta = {
-            //     msg: error.response.data.msg,
-            //     categoria: 'alerta-error'
-            // }
-            // dispatch({
-            //     type:REGISTRO_ERROR,
-            //     payload: alerta
-            // });
+            const alerta = {
+                msg: error.response.data,
+                categoria: 'alerta-error'
+            }
+            dispatch({
+                type:REGISTRO_ERROR,
+                payload: alerta
+            });
         }
     };
 
-    const obtenerUsuarioTipos = async () => {
-        try{
-            const respuesta = await clienteAxios.get('/usuario_tipos');
-            dispatch({
-                type: OBTENER_USUARIO_TIPOS,
-                payload: respuesta.data
-            })
-        } catch (error){
+    // const obtenerUsuarioTipos = async () => {
+    //     try{
+    //         const respuesta = await clienteAxios.get('/usuario_tipos');
+    //         dispatch({
+    //             type: OBTENER_USUARIO_TIPOS,
+    //             payload: respuesta.data
+    //         })
+    //     } catch (error){
 
-        }
-    }
+    //     }
+    // }
 
     const usuarioAutenticado = async () => {
         const user = localStorage.getItem('user');
@@ -153,7 +150,7 @@ const AuthState = props => {
             iniciarSesion,
             cerrarSesion,
             perfil,
-            obtenerUsuarioTipos
+            // obtenerUsuarioTipos
          }}
         >
             {props.children}

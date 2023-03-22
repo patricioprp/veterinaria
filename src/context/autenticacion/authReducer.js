@@ -8,7 +8,7 @@ import {
     OBTENER_USUARIO,
     ES_VENDEDOR,
     ES_CLIENTE,
-    OBTENER_USUARIO_TIPOS
+    // OBTENER_USUARIO_TIPOS
 
 } from '../../types'
 
@@ -62,11 +62,11 @@ export default (state,action) => {
                 uri: action.payload.uri,
                 user_tipo: action.payload.user_tipo
             }
-        case OBTENER_USUARIO_TIPOS:
-            return{
-                ...state,
-                usuario_tipos : action.payload
-            }
+        // case OBTENER_USUARIO_TIPOS:
+        //     return{
+        //         ...state,
+        //         usuario_tipos : action.payload
+        //     }
         default:
             return state;
     }

@@ -3,13 +3,13 @@
     {
       "email": "gaston2@gmail.com",
       "password": "$2a$10$0QH8wq1cVHCmMX1KMCgAsefKDtEEl3ntQfWv/FWQMOCF7Lg5l1Mty",
-      "tipo": 2,
+      "tipo": "2",
       "id": 1
     },
     {
       "email": "gaston@gmail.com",
       "password": "$2a$10$hqACUchj/18O3x5hhTLxoeVQm2Ql8RXX7VDZ9ZqJHmld22G8JBmLO",
-      "tipo": 1,
+      "tipo": "1",
       "id": 2
     },
     {
@@ -35,6 +35,48 @@
       "password": "$2a$10$0QBhY6/Ko0XXf8wz2.TJr.hqE9xddLJugfqd.iwynSrQsDvxFwFK2",
       "tipo": "2",
       "id": 6
+    },
+    {
+      "email": "gaston29@gmail.com",
+      "password": "$2a$10$mc.I9U1Eddd6WF5TEfkThe5dLFiLoNv59N3c8C6UN.RRuCAXrlPt2",
+      "tipo": "1",
+      "id": 7
+    },
+    {
+      "email": "gastoncito@gmail.com",
+      "password": "$2a$10$qMU4GEy2DlGTCsfSGofyr.cZE/Mk83FiPjRnCKqQ0zM1keFElA7y2",
+      "tipo": "1",
+      "id": 8
+    },
+    {
+      "email": "gastoncito2@gmail.com",
+      "password": "$2a$10$IF6fMbgMms5J1T1/TIwweOaFzgXT2XrA7lZHyou1q4JFhjpVO8t4q",
+      "tipo": "1",
+      "id": 9
+    },
+    {
+      "email": "gaston296@gmail.com",
+      "password": "$2a$10$CGCb21NDdWWJ9bEulnCBge5Ojg/yQ2EheMg6ndCRvPr9l.NoQuZjC",
+      "tipo": "1",
+      "id": 10
+    },
+    {
+      "email": "gaston02@gmail.com",
+      "password": "$2a$10$qmUUDZt1QX8Zv9eAx1fXLOmk01emsocsURD9f0ZZpggGf66I54Y1y",
+      "tipo": "1",
+      "id": 11
+    },
+    {
+      "email": "gaston2022@gmail.com",
+      "password": "$2a$10$BWYAKtRm/5xOOwYPiF7BQ.gUQE3iDksiAA/ssry7bLR2h/iUEIvVO",
+      "tipo": "2",
+      "id": 12
+    },
+    {
+      "email": "gaston2023@gmail.com",
+      "password": "$2a$10$Z35LTIO9H5Kz0FE68.wSIueRfiAkmdD/i72jRc9547CJ5/BSjaa/2",
+      "tipo": "2",
+      "id": 13
     }
   ],
   "usuario_tipos": [
