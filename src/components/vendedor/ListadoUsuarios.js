@@ -39,11 +39,11 @@ const columnas = [
         selector:  (row, i) => row.email,
         sortable: true
     },
-    // {
-    //     name: 'Campeon',
-    //     selector:  (row, i) => row.campeon,
-    //     sortable: true
-    // },
+    {
+        name: 'Usuario tipo',
+        selector:  (row, i) => row.tipo,
+        sortable: true
+    },
     // {
     //     name: 'SubCampeon',
     //     selector:  (row, i) => row.subCampeon,
@@ -58,18 +58,18 @@ const paginationOpciones={
     selectAllRowsItemText:'Todos'
 }
 
-const conditionalRowStyles = [
-    {
-		when: row => row.tipo === "2" ,
-		style: {
-			backgroundColor: 'rgba(63, 195, 128, 0.9)',
-			color: 'white',
-			'&:hover': {
-				cursor: 'pointer',
-			},
-		},
-	}
-]
+// const conditionalRowStyles = [
+//     {
+// 		when: row => row.tipo === "2" ,
+// 		style: {
+// 			backgroundColor: 'rgba(63, 195, 128, 0.9)',
+// 			color: 'white',
+// 			'&:hover': {
+// 				cursor: 'pointer',
+// 			},
+// 		},
+// 	}
+// ]
 
 const ListadoUsuarios = () => {
     const vendedorContext = useContext(VendedorContext);
@@ -88,7 +88,7 @@ const ListadoUsuarios = () => {
         paginationComponentOptions={paginationOpciones}
         fixedHeader
         fixedHeaderScrollHeight='600px'
-        conditionalRowStyles={conditionalRowStyles}
+        // conditionalRowStyles={conditionalRowStyles}
         />
             {/* <h1>Listado de Usuarios</h1> */}
                 {/* <table>

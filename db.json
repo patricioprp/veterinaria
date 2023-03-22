@@ -77,6 +77,12 @@
       "password": "$2a$10$Z35LTIO9H5Kz0FE68.wSIueRfiAkmdD/i72jRc9547CJ5/BSjaa/2",
       "tipo": "2",
       "id": 13
+    },
+    {
+      "email": "cliente1@gmail.com",
+      "password": "$2a$10$fNdyHdvBOla4oN/eAO/kKOi2zsbTxZAngGIyKXQ27rFj1cujJ.moe",
+      "tipo": "1",
+      "id": 14
     }
   ],
   "usuario_tipos": [

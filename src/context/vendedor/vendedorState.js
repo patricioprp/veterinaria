@@ -44,6 +44,9 @@ const VendedorState = props => {
         try{
             const respuesta = await clienteAxios.get('/users');
             const user_filtrado = respuesta.data.filter(usuario => usuario.tipo === '2');
+            user_filtrado.forEach(function(item){
+                item.tipo = "Vendedor"
+              });
             dispatch({
                 type: MOSTRAR_LISTADO_USUARIO,
                 payload: user_filtrado
@@ -65,7 +68,9 @@ const VendedorState = props => {
         try{
             const respuesta = await clienteAxios.get('/users');
             const user_filtrado = respuesta.data.filter(usuario => usuario.tipo === '2');
-            console.log(user_filtrado)
+            user_filtrado.forEach(function(item){
+                item.tipo = "Vendedor"
+              });
             dispatch({
                 type: OBTENER_LISTADO_USUARIOS,
                 payload: user_filtrado

@@ -14,9 +14,9 @@ const NuevaCuenta = (props) => {
 
     // En caso de que el usuario se haya autenticado o registrado o sea un registro duplicado
     useEffect(() => {
-        if(autenticado) {
-            props.history.push('/proyectos');
-        }
+        // if(autenticado) {
+        //     props.history.push('/proyectos');
+        // }
 
         if(mensaje) {
             mostrarAlerta(mensaje.msg, mensaje.categoria);
@@ -27,12 +27,13 @@ const NuevaCuenta = (props) => {
     // State para iniciar sesión
     const [usuario, guardarUsuario] = useState({
         email: '',
+        tipo:'1',
         password: '',
         confirmar: ''
     });
 
     // extraer de usuario
-    const { nombre, email, password, confirmar } = usuario;
+    const { tipo, email, password, confirmar } = usuario;
 
     const onChange = e => {
         guardarUsuario({
@@ -68,6 +69,7 @@ const NuevaCuenta = (props) => {
         // Pasarlo al action
         registrarUsuario({
             email, 
+            tipo,
             password
         });
     }
