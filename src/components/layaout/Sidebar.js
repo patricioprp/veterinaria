@@ -1,5 +1,6 @@
 import React from 'react';
-import OptionsSlider from '../vendedor/OptionsSlider';
+import OptionsSliderVendedor from '../vendedor/OptionsSlider';
+import OptionsSliderCliente from '../cliente/OptionsSlider';
 const Sidebar = () => {
     return ( 
         <aside>
@@ -7,7 +8,7 @@ const Sidebar = () => {
              {/* <NuevoProyecto /> */}
             <div className='proyectos'>
                 <h2> Veterinaria</h2>
-                <OptionsSlider />
+                <OptionsSliderCliente />
                 <hr />
             </div>
         </aside>

@@ -13,8 +13,7 @@ import {
     REGISTRO_EXITOSO,
     OBTENER_USUARIO,
     ES_CLIENTE,
-    ES_VENDEDOR,
-    // OBTENER_USUARIO_TIPOS
+    ES_VENDEDOR
 
 } from '../../types'
 
@@ -57,18 +56,6 @@ const AuthState = props => {
         }
     };
 
-    // const obtenerUsuarioTipos = async () => {
-    //     try{
-    //         const respuesta = await clienteAxios.get('/usuario_tipos');
-    //         dispatch({
-    //             type: OBTENER_USUARIO_TIPOS,
-    //             payload: respuesta.data
-    //         })
-    //     } catch (error){
-
-    //     }
-    // }
-
     const usuarioAutenticado = async () => {
         const user = localStorage.getItem('user');
         dispatch({
@@ -82,7 +69,6 @@ const AuthState = props => {
             const respuesta = await clienteAxios.post('/login',datos);
             localStorage.setItem('token',respuesta.data.accessToken)
             localStorage.setItem('user', JSON.stringify(respuesta.data.user));
-//debugger
             dispatch({
                 type: LOGIN_EXITOSO,
                 payload: respuesta.data.user
@@ -105,8 +91,7 @@ const AuthState = props => {
 
     const perfil = (tipo_id) =>{
 
-
-        if(tipo_id === 1){
+        if(tipo_id === "1"){
             const set_perfil = {
                 uri: '/home/cliente',
                 user_tipo: 1
@@ -115,7 +100,8 @@ const AuthState = props => {
                 type:ES_CLIENTE,
                 payload:set_perfil
             });
-        }else {
+        }
+        if(tipo_id === "2") {
             const set_perfil = {
                 uri: '/home/vendedor',
                 user_tipo: 2

@@ -20,6 +20,7 @@ const Login = () => {
         if(usuario){
             perfil(user_tipo)
             if(autenticado && uri){
+            
                 history(uri);   
           }
         }

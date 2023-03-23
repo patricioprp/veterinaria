@@ -13,7 +13,7 @@ const Barra = () => {
 
     return ( 
         <header className='app-header'>
-            {usuario ? <p className='nombre-usuario'>{usuario} |  <span>{ user_tipo === 1 ? "Cliente" : "Vendedor"}</span></p> :null}
+            {usuario ? <p className='nombre-usuario'>{usuario} |  <span>{ user_tipo === "1" ? "Cliente" : "Vendedor"}</span></p> :null}
             
             <nav className='nav-principal'>
                 <button className='btn btn-blank cerrar-sesion'

@@ -11,9 +11,9 @@ const Home = () => {
     const {usuarioAutenticado } = authContext;
 
 
-    useEffect(() => {
-      usuarioAutenticado()
-    }, [])
+    // useEffect(() => {
+    //   usuarioAutenticado()
+    // }, [])
     
     return ( 
         <div className='contenedor-app'>

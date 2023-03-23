@@ -7,27 +7,23 @@ import {
     REGISTRO_EXITOSO,
     OBTENER_USUARIO,
     ES_VENDEDOR,
-    ES_CLIENTE,
-    // OBTENER_USUARIO_TIPOS
+    ES_CLIENTE
 
 } from '../../types'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state,action) => {
-    //debugger
+
     switch(action.type){
 
         case REGISTRO_EXITOSO:
         case LOGIN_EXITOSO:
-            //  localStorage.setItem('token', action.payload.token)
-            // console.log('state-reducer',action.payload.email,action.payload.type,action.payload.id)
-
             return{
                 ...state,
                 autenticado:true,
                 mensaje:null,
                 usuario: action.payload.email, 
-                user_tipo: action.payload.type,
+                user_tipo: action.payload.tipo,
                 cargando: false,
                 user_id: action.payload.id
             }
@@ -36,14 +32,14 @@ export default (state,action) => {
                 ...state,
                 autenticado: true,
                 usuario: JSON.parse(action.payload).email, 
-                user_tipo: JSON.parse(action.payload).type,
+                user_tipo: JSON.parse(action.payload).tipo,
                 cargando: false,
             }
         case CERRAR_SESION:
         case LOGIN_ERROR:
         case REGISTRO_ERROR:
             localStorage.removeItem('token');
-            localStorage.removeItem('email');
+            localStorage.removeItem('user');
             return{
                 ...state,
                 token: null,
@@ -62,11 +58,6 @@ export default (state,action) => {
                 uri: action.payload.uri,
                 user_tipo: action.payload.user_tipo
             }
-        // case OBTENER_USUARIO_TIPOS:
-        //     return{
-        //         ...state,
-        //         usuario_tipos : action.payload
-        //     }
         default:
             return state;
     }
