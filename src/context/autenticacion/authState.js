@@ -38,11 +38,13 @@ const AuthState = props => {
     const registrarUsuario = async datos => {
         try {
             const respuesta = await clienteAxios.post('/register',datos);
-            console.log(respuesta)
+            localStorage.setItem('token',respuesta.data.accessToken)
+            localStorage.setItem('user', JSON.stringify(respuesta.data.user));
             dispatch({
                 type:REGISTRO_EXITOSO,
-                payload:respuesta.data
+                payload:respuesta.data.user
             });          
+            usuarioAutenticado(); 
         } catch (error) {
             console.log(error);
             const alerta = {
@@ -135,8 +137,7 @@ const AuthState = props => {
             usuarioAutenticado,
             iniciarSesion,
             cerrarSesion,
-            perfil,
-            // obtenerUsuarioTipos
+            perfil
          }}
         >
             {props.children}

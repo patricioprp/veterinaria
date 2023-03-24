@@ -5,7 +5,7 @@ import vendedorContext from "./vendedorContext";
 
 import {
     MOSTRAR_FORM_USUARIO,
-    MOSTRAR_FORM_PEDIDO,
+    MOSTRAR_FORM_MASCOTA_DUENIO,
     MOSTRAR_LISTADO_PEDIDO,
     MOSTRAR_LISTADO_USUARIO,
     OBTENER_LISTADO_USUARIOS,
@@ -14,7 +14,7 @@ import {
 
 const VendedorState = props => {
     const initialState = {
-        form_pedido: null,
+        form_mascota_duenio: null,
         form_usuario: null,
         listado_pedido: null,
         listado_usuario: null,
@@ -29,9 +29,9 @@ const VendedorState = props => {
         })
     }
 
-    const mostrarFormPedido = () => {
+    const mostrarFormMascotaDuenio = () => {
         dispatch({
-            type: MOSTRAR_FORM_PEDIDO
+            type: MOSTRAR_FORM_MASCOTA_DUENIO
         })
     }
 
@@ -92,12 +92,12 @@ const VendedorState = props => {
         <vendedorContext.Provider
         value={{
            form_usuario: state.form_usuario,
-           form_pedido: state.form_pedido,
+           form_mascota_duenio: state.form_mascota_duenio,
            listado_pedido: state.listado_pedido,
            listado_usuario: state.listado_usuario,
            listado_users : state.listado_users,
             mostrarFormUsuario,
-            mostrarFormPedido,
+            mostrarFormMascotaDuenio,
             mostrarListadoPedido,
             mostrarListadoUsuario,
             obtenerListadoUsuarios

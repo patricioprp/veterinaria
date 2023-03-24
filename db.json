@@ -1,88 +1,152 @@
 {
   "users": [
     {
-      "email": "gaston2@gmail.com",
+      "email": "vendedor@gmail.com",
       "password": "$2a$10$0QH8wq1cVHCmMX1KMCgAsefKDtEEl3ntQfWv/FWQMOCF7Lg5l1Mty",
       "tipo": "2",
       "id": 1
     },
     {
-      "email": "gaston@gmail.com",
+      "email": "cliente@gmail.com",
       "password": "$2a$10$hqACUchj/18O3x5hhTLxoeVQm2Ql8RXX7VDZ9ZqJHmld22G8JBmLO",
       "tipo": "1",
       "id": 2
     },
     {
-      "email": "gaston22@gmail.com",
+      "email": "vendedor2@gmail.com",
       "password": "$2a$10$8qBkJ84l.vja4yp1o7ueXOfvQEIvQzAyDsuboDMmC1y1wamEQogyu",
       "tipo": "2",
       "id": 3
     },
     {
-      "email": "gaston223@gmail.com",
+      "email": "vendedor3@gmail.com",
       "password": "$2a$10$uQxeyCY2j.Dj226FSE1CvOJa2kLOp2mUjL46FjEEFtnyMJZmFW0Om",
       "tipo": "2",
       "id": 4
     },
     {
-      "email": "gaston21@gmail.com",
+      "email": "vendedor4@gmail.com",
       "password": "$2a$10$V9TQdGVBw9OEU5D.6Mix7eb/EuBXqTTo/jwPsfwkKC1OFs89WhLcS",
       "tipo": "2",
       "id": 5
     },
     {
-      "email": "gaston211@gmail.com",
+      "email": "vendedor5@gmail.com",
       "password": "$2a$10$0QBhY6/Ko0XXf8wz2.TJr.hqE9xddLJugfqd.iwynSrQsDvxFwFK2",
       "tipo": "2",
       "id": 6
     },
     {
-      "email": "gaston29@gmail.com",
+      "email": "cliente1@gmail.com",
       "password": "$2a$10$mc.I9U1Eddd6WF5TEfkThe5dLFiLoNv59N3c8C6UN.RRuCAXrlPt2",
       "tipo": "1",
       "id": 7
     },
     {
-      "email": "gastoncito@gmail.com",
+      "email": "cliente2@gmail.com",
       "password": "$2a$10$qMU4GEy2DlGTCsfSGofyr.cZE/Mk83FiPjRnCKqQ0zM1keFElA7y2",
       "tipo": "1",
       "id": 8
     },
     {
-      "email": "gastoncito2@gmail.com",
+      "email": "cliente3@gmail.com",
       "password": "$2a$10$IF6fMbgMms5J1T1/TIwweOaFzgXT2XrA7lZHyou1q4JFhjpVO8t4q",
       "tipo": "1",
       "id": 9
     },
     {
-      "email": "gaston296@gmail.com",
+      "email": "cliente4@gmail.com",
       "password": "$2a$10$CGCb21NDdWWJ9bEulnCBge5Ojg/yQ2EheMg6ndCRvPr9l.NoQuZjC",
       "tipo": "1",
       "id": 10
     },
     {
-      "email": "gaston02@gmail.com",
+      "email": "cliente5@gmail.com",
       "password": "$2a$10$qmUUDZt1QX8Zv9eAx1fXLOmk01emsocsURD9f0ZZpggGf66I54Y1y",
       "tipo": "1",
       "id": 11
     },
     {
-      "email": "gaston2022@gmail.com",
+      "email": "vendedor10@gmail.com",
       "password": "$2a$10$BWYAKtRm/5xOOwYPiF7BQ.gUQE3iDksiAA/ssry7bLR2h/iUEIvVO",
       "tipo": "2",
       "id": 12
     },
     {
-      "email": "gaston2023@gmail.com",
+      "email": "vendedor11@gmail.com",
       "password": "$2a$10$Z35LTIO9H5Kz0FE68.wSIueRfiAkmdD/i72jRc9547CJ5/BSjaa/2",
       "tipo": "2",
       "id": 13
     },
     {
-      "email": "cliente1@gmail.com",
+      "email": "cliente10@gmail.com",
       "password": "$2a$10$fNdyHdvBOla4oN/eAO/kKOi2zsbTxZAngGIyKXQ27rFj1cujJ.moe",
       "tipo": "1",
       "id": 14
+    },
+    {
+      "email": "cliente11@gmail.com",
+      "password": "$2a$10$VLx28plYqqd58aapDaiq2utMuK/p8CwqD2R/Rx5hnbqX1k/mAdDfW",
+      "tipo": "1",
+      "id": 15
+    },
+    {
+      "email": "cliente100@gmail.com",
+      "password": "$2a$10$2U2pEtxOaUIbAotLF4pRY.WbDxAtRQymMwQ1vRGfS7y2Jp7MEnyyu",
+      "tipo": "1",
+      "id": 16
+    },
+    {
+      "email": "cliente200@gmail.com",
+      "password": "$2a$10$CbzwGmbWgr2GcsrHtpCpQu12Y8dbA7wJoFnpbPCKL/N9jhYtMM70m",
+      "tipo": "1",
+      "id": 17
+    },
+    {
+      "email": "cliente300@gmail.com",
+      "password": "$2a$10$nlHH2OskuFKxsZacNqTAhuogpojVZq0KDaVNq5fVM5ObzDkkw2K8C",
+      "id": 18
+    },
+    {
+      "email": "cliente400@gmail.com",
+      "password": "$2a$10$HZKApRHqoz1H.VduzkA6M.TccLwr11Nc07WMSmKjVdRcQa/sTX3Du",
+      "id": 19
+    },
+    {
+      "email": "client1e@gmail.com",
+      "password": "$2a$10$jMGzTzfc0EMKb0OidHL8HOXsotHqrZA8HGFt2gFQlggzAMT.Y1NLi",
+      "tipo": "1",
+      "id": 20
+    },
+    {
+      "email": "cliente111@gmail.com",
+      "password": "$2a$10$uoSfCS2Gcu90hrVNVkFUQ.Ayx0.TWz7U7VujyhQpP5VGgJadjR4XC",
+      "tipo": "1",
+      "id": 21
+    },
+    {
+      "email": "vendedor6@gmail.com",
+      "password": "$2a$10$jUuq8kRCeQHhf4WaVXfvGeDXHoxyCtaYwpp/fCe8427O1wrmFNF26",
+      "tipo": "2",
+      "id": 22
+    },
+    {
+      "email": "vendedor7@gmail.com",
+      "password": "$2a$10$/OK5CXLPrQJOMhe0jiD69eMvVH7LbqBHHTtBGP7hFIvvHuPj1CDcu",
+      "tipo": "2",
+      "id": 23
+    },
+    {
+      "email": "vendedor8@gmail.com",
+      "password": "$2a$10$BtKYasJZrrg04XGRaedO9eHs22qTzFW3Hs6FzHUoXB4a/quDaKEuq",
+      "tipo": "2",
+      "id": 24
+    },
+    {
+      "email": "vendedor9@gmail.com",
+      "password": "$2a$10$92nT2Dw77cBfBk9qLh5RxuxOKSsb56iwGuwP7e4CZqx1RuPkg8wza",
+      "tipo": "2",
+      "id": 25
     }
   ],
   "usuario_tipos": [
@@ -101,9 +165,18 @@
       "especie_id": 1,
       "usuario_id": 1,
       "nombre": "Felix",
-      "fecha_nacimiento": "14/02/2000",
+      "fecha_nacimiento": "14/02/2020",
       "peso": 5,
-      "esterelizado": true
+      "esterelizado": "si"
+    },
+    {
+      "id": 2,
+      "especie_id": 2,
+      "usuario_id": 2,
+      "nombre": "Luna",
+      "fecha_nacimiento": "14/02/2015",
+      "peso": 15,
+      "esterelizado": "NO" 
     }
   ],
   "especies": [
@@ -116,13 +189,21 @@
       "tipo": "perro"
     }
   ],
-  "combos": [
+  "pedidos": [
     {
       "id": 1,
       "mascota_id": 1,
       "alimento": 2.5,
+      "complemento": "si",
+      "complemento_extra": "si",
+      "estado_id": 1
+    },
+    {
+      "id": 2,
+      "mascota_id": 2,
+      "alimento": 12,
       "complemento": 1,
-      "complemento_extra": true,
+      "complemento_extra": "si",
       "estado_id": 1
     }
   ],

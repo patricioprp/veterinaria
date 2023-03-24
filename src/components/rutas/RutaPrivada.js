@@ -14,6 +14,8 @@ import AuthContext from '../../context/autenticacion/authContext';
        // eslint-disable-next-line
 
     }, [])
+ 
     return (!autenticado && !cargando ? <Navigate to="/" /> : children)
   }
+
   export default RutaPrivada;

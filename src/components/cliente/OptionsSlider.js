@@ -17,6 +17,7 @@ const OptionsSlider = () => {
         <li onClick ={mostrarFormUsuario}>Nuevo Vendedor</li>
         <li onClick ={mostrarListadoUsuario}>Listado de Vendedores</li> */}
         <li>Listado de Clientes</li>
+        <li>Listado de Clientes</li>
     </ul>
     )
 }

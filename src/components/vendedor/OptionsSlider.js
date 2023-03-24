@@ -6,17 +6,16 @@ const OptionsSlider = () => {
     const vendedorContext = useContext(VendedorContext);
     const {
         mostrarFormUsuario,
-        mostrarFormPedido,
+        mostrarFormMascotaDuenio,
         mostrarListadoPedido,
         mostrarListadoUsuario} =  vendedorContext;
 
     return(
         <ul>
-        <li onClick={mostrarFormPedido}>Nuevo Pedido</li>
-        <li onClick={mostrarListadoPedido}>Listado de Pedidos</li>
+        <li onClick={mostrarFormMascotaDuenio}>Mascotas y Dueños</li>
+        <li onClick={mostrarListadoPedido}>Pedidos</li>
         <li onClick ={mostrarFormUsuario}>Nuevo Vendedor</li>
-        <li onClick ={mostrarListadoUsuario}>Listado de Vendedores</li>
-        <li>Listado de Clientes</li>
+        <li onClick ={mostrarListadoUsuario}>Vendedores</li>
     </ul>
     )
 }

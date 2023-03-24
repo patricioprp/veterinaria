@@ -1,5 +1,5 @@
 import React, {useContext,useEffect} from 'react';
-import Sidebar from '../layaout/Sidebar';
+import Sidebar from '../cliente/Sidebar';
 import Barra from '../layaout/Barra';
 import AuthContext from '../../context/autenticacion/authContext';
 
