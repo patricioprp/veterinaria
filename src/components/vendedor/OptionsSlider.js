@@ -12,8 +12,8 @@ const OptionsSlider = () => {
 
     return(
         <ul>
-        <li onClick={mostrarFormMascotaDuenio}>Mascotas y Dueños</li>
-        <li onClick={mostrarListadoPedido}>Pedidos</li>
+        <li onClick ={mostrarFormMascotaDuenio}>Mascotas y Dueños</li>
+        <li onClick ={mostrarListadoPedido}>Pedidos</li>
         <li onClick ={mostrarFormUsuario}>Nuevo Vendedor</li>
         <li onClick ={mostrarListadoUsuario}>Vendedores</li>
     </ul>

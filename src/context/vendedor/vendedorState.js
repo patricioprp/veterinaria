@@ -16,7 +16,7 @@ const VendedorState = props => {
     const initialState = {
         form_mascota_duenio: null,
         form_usuario: null,
-        listado_pedido: null,
+        listado_pedido: true,
         listado_usuario: null,
         listado_users: []
     }

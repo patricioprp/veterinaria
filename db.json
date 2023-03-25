@@ -176,7 +176,7 @@
       "nombre": "Luna",
       "fecha_nacimiento": "14/02/2015",
       "peso": 15,
-      "esterelizado": "NO" 
+      "esterelizado": "NO"
     }
   ],
   "especies": [
@@ -192,19 +192,19 @@
   "pedidos": [
     {
       "id": 1,
-      "mascota_id": 1,
+      "mascota_id": "1",
       "alimento": 2.5,
       "complemento": "si",
       "complemento_extra": "si",
-      "estado_id": 1
+      "estado_id": "2"
     },
     {
       "id": 2,
-      "mascota_id": 2,
+      "mascota_id": "2",
       "alimento": 12,
       "complemento": 1,
       "complemento_extra": "si",
-      "estado_id": 1
+      "estado_id": "1"
     }
   ],
   "estados_pedido": [
