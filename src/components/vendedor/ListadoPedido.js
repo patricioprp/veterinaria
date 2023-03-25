@@ -15,7 +15,7 @@ const ListadoPedido = () => {
             sortable: true
         },
         {
-            name: 'Alimento',
+            name: 'Alimento[Kg]',
             selector:  (row, i) => row.alimento,
             sortable: true
         },

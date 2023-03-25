@@ -2,7 +2,6 @@ import { OBTENER_PEDIDOS } from "../../types";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state,action) => {
-    console.log(action.payload)
     switch(action.type){
         case OBTENER_PEDIDOS:
             return{

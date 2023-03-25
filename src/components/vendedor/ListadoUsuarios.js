@@ -28,19 +28,6 @@ const paginationOpciones={
     selectAllRowsItemText:'Todos'
 }
 
-// const conditionalRowStyles = [
-//     {
-// 		when: row => row.tipo === "2" ,
-// 		style: {
-// 			backgroundColor: 'rgba(63, 195, 128, 0.9)',
-// 			color: 'white',
-// 			'&:hover': {
-// 				cursor: 'pointer',
-// 			},
-// 		},
-// 	}
-// ]
-
 const ListadoUsuarios = () => {
     const vendedorContext = useContext(VendedorContext);
     const {obtenerListadoUsuarios,listado_users} = vendedorContext;
@@ -58,7 +45,6 @@ const ListadoUsuarios = () => {
             paginationComponentOptions={paginationOpciones}
             fixedHeader
             fixedHeaderScrollHeight='600px'
-            // conditionalRowStyles={conditionalRowStyles}
             />
         </>
     )

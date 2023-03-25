@@ -3,7 +3,7 @@
     {
       "email": "vendedor@gmail.com",
       "password": "$2a$10$0QH8wq1cVHCmMX1KMCgAsefKDtEEl3ntQfWv/FWQMOCF7Lg5l1Mty",
-      "tipo": "2",
+      "tipo": "1",
       "id": 1
     },
     {
@@ -13,9 +13,9 @@
       "id": 2
     },
     {
-      "email": "vendedor2@gmail.com",
+      "email": "cliente2@gmail.com",
       "password": "$2a$10$8qBkJ84l.vja4yp1o7ueXOfvQEIvQzAyDsuboDMmC1y1wamEQogyu",
-      "tipo": "2",
+      "tipo": "1",
       "id": 3
     },
     {
@@ -162,8 +162,8 @@
   "mascotas": [
     {
       "id": 1,
-      "especie_id": 1,
-      "usuario_id": 1,
+      "especie_id": "1",
+      "usuario_id": 3,
       "nombre": "Felix",
       "fecha_nacimiento": "14/02/2020",
       "peso": 5,
@@ -171,7 +171,7 @@
     },
     {
       "id": 2,
-      "especie_id": 2,
+      "especie_id": "2",
       "usuario_id": 2,
       "nombre": "Luna",
       "fecha_nacimiento": "14/02/2015",
