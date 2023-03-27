@@ -28,14 +28,16 @@ export default (state,action) => {
                 ...state,
                 mostrar_form_mascota: true,
                 mostrar_mis_mascotas: false,
-                mostrar_mis_pedidos: false
+                mostrar_mis_pedidos: false,
+                mostrar_form_pedidos: false,
             }
         case MOSTRAR_MIS_MASCOTAS:
             return{
                 ...state,
                 mostrar_mis_mascotas: true,
                 mostrar_form_mascota: false,
-                mostrar_mis_pedidos: false
+                mostrar_mis_pedidos: false,
+                mostrar_form_pedidos: false,
             }
         case OBTENER_MIS_MASCOTAS:
             return{
@@ -48,6 +50,7 @@ export default (state,action) => {
                 ...state,
                 mostrar_mis_mascotas: false,
                 mostrar_form_mascota: false,
+                mostrar_form_pedidos: false,
                 mostrar_mis_pedidos: true
             }
         case OBTENER_MIS_PEDIDOS:
@@ -55,6 +58,14 @@ export default (state,action) => {
                 ...state,
                 pedidos: action.payload
             }
+            case MOSTRAR_FORM_PEDIDOS:
+                return{
+                    ...state,
+                    mostrar_form_pedidos: true,
+                    mostrar_mis_mascotas: false,
+                    mostrar_form_mascota: false,
+                    mostrar_mis_pedidos: false
+                }
         default:
             return state;
     }    

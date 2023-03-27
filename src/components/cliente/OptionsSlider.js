@@ -7,13 +7,14 @@ const OptionsSlider = () => {
     const {
         mostrarFormMascota,
         mostrarMisMascotas,
-        mostrarMisPedidos
+        mostrarMisPedidos,
+        mostrarFormPedidos
         } =  clienteContext;
 
     return(
         <ul>
         <li onClick={mostrarFormMascota}>Registrar Mascota</li>
-        <li>Solicitar Combo</li>
+        <li onClick={mostrarFormPedidos}>Solicitar Combo</li>
         <li onClick={mostrarMisPedidos}>Ver Combos Pedidos</li>
         <li onClick={mostrarMisMascotas}>Mis Mascotas</li>
     </ul>
