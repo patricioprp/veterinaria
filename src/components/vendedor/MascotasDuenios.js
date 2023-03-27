@@ -16,7 +16,7 @@ const MascotasDuenios = () => {
             sortable: true
         },
         {
-            name: 'Mascota Especie',
+            name: 'Especie',
             selector:  (row, i) => {if(row.especie_id === "1"){return "GATO"}else{ return "PERRO"}},
             sortable: true
         },
@@ -26,13 +26,13 @@ const MascotasDuenios = () => {
             sortable: true
         },
         {
-            name: 'Fecha de Nacimiento',
+            name: 'Fecha de Nac.',
             selector:  (row, i) => row.fecha_nacimiento,
             sortable: true
         },
         {
             name: 'Peso',
-            selector:  (row, i) => row.peso,
+            selector:  (row, i) => row.peso+"[Kg]",
             sortable: true
         },
         {
@@ -41,7 +41,12 @@ const MascotasDuenios = () => {
             sortable: true
         },
         {
-            name: 'Dueño',
+            name: 'Nombre del Dueño',
+            selector:  (row, i) => row.usuario_id[0].nombre,
+            sortable: true
+        },
+        {
+            name: 'Usuario ',
             selector:  (row, i) => row.usuario_id[0].email,
             sortable: true
         },

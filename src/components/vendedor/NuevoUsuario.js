@@ -20,12 +20,13 @@ const NuevoUsuario = () => {
 
     const [user,guardarUser] =  useState({
         email:'',
+        nombre:'',
         password:'',
         tipo:'2',
         confirmar:''
     });
 
-    const {email,password,tipo,confirmar} = user;
+    const {email,nombre,password,tipo,confirmar} = user;
 
     const onChange = e =>{
         guardarUser({
@@ -36,7 +37,7 @@ const NuevoUsuario = () => {
 
     const onSubmit = e =>{
         e.preventDefault();
-        if(email.trim() === '' || password.trim() === ''  || confirmar.trim() === ''){
+        if(email.trim() === '' || password.trim() === ''  || confirmar.trim() === '' || nombre.trim() === ''){
             mostrarAlerta('Todos los campos son obligatorios','alerta-error');
             return
         }
@@ -46,17 +47,28 @@ const NuevoUsuario = () => {
             return
         }
         mostrarListadoUsuario()
-        registrarUsuario({email,password,tipo});
+        registrarUsuario({nombre,email,password,tipo});
     }
 return(
-    <div className="form-usuario">
+    <>
     { alerta ? ( <div className={`alerta ${alerta.categoria}`}> {alerta.msg} </div> )  : null }
-    <div className="contenedor-form sombra-dark">
+    <div className="contenedor-form sombra-dark" style={{ margin: "0 auto" , marginTop:"15px"}}>
         <h1>Crear Usuario</h1>
 
         <form
              onSubmit={onSubmit}
         >
+            <div className="campo-form">
+                    <label htmlFor="nombre">Nombre</label>
+                    <input 
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu Nombre"
+                        value={nombre}
+                        onChange={onChange}
+                        />
+            </div>            
             <div className="campo-form">
                 <label htmlFor="email">Email</label>
                 <input 
@@ -98,7 +110,7 @@ return(
             </div>
         </form>
     </div>
-</div>
+</>
 )
 }
 

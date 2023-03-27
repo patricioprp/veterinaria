@@ -1,23 +1,21 @@
 import React, {useContext} from "react";
-// import VendedorContext from "../../context/vendedor/vendedorContext";
+import ClienteContext from "../../context/cliente/clienteContext";
 
 const OptionsSlider = () => {
-    //Extrart la informacion de vendedor
-    // const vendedorContext = useContext(VendedorContext);
-    // const {
-    //     mostrarFormUsuario,
-    //     mostrarFormPedido,
-    //     mostrarListadoPedido,
-    //     mostrarListadoUsuario} =  vendedorContext;
+    //Extrart la informacion de cliente
+    const clienteContext = useContext(ClienteContext);
+    const {
+        mostrarFormMascota,
+        mostrarMisMascotas,
+        mostrarMisPedidos
+        } =  clienteContext;
 
     return(
         <ul>
-        {/* <li onClick={mostrarFormPedido}>Nuevo Pedido</li>
-        <li onClick={mostrarListadoPedido}>Listado de Pedidos</li>
-        <li onClick ={mostrarFormUsuario}>Nuevo Vendedor</li>
-        <li onClick ={mostrarListadoUsuario}>Listado de Vendedores</li> */}
-        <li>Listado de Clientes</li>
-        <li>Listado de Clientes</li>
+        <li onClick={mostrarFormMascota}>Registrar Mascota</li>
+        <li>Solicitar Combo</li>
+        <li onClick={mostrarMisPedidos}>Ver Combos Pedidos</li>
+        <li onClick={mostrarMisMascotas}>Mis Mascotas</li>
     </ul>
     )
 }

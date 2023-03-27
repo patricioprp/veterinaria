@@ -34,13 +34,14 @@ const NuevaCuenta = (props) => {
     // State para iniciar sesión
     const [user, guardarUsuario] = useState({
         email: '',
+        nombre: '',
         tipo:'1',
         password: '',
         confirmar: ''
     });
 
     // extraer de usuario
-    const { tipo, email, password, confirmar } = user;
+    const { tipo, email, nombre, password, confirmar } = user;
 
     const onChange = e => {
         guardarUsuario({
@@ -55,6 +56,7 @@ const NuevaCuenta = (props) => {
 
         // Validar que no haya campos vacios
         if( email.trim() === '' || 
+            nombre.trim() === '' || 
             password.trim() === '' || 
             confirmar.trim() === '' ) {
                 mostrarAlerta('Todos los campos son obligatorios', 'alerta-error');
@@ -75,6 +77,7 @@ const NuevaCuenta = (props) => {
 
         // Pasarlo al action
         registrarUsuario({
+            nombre,
             email, 
             tipo,
             password
@@ -92,6 +95,17 @@ const NuevaCuenta = (props) => {
                 <form
                     onSubmit={onSubmit}
                 >
+                    <div className="campo-form">
+                            <label htmlFor="nombre">Nombre</label>
+                            <input 
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Tu Nombre"
+                                value={nombre}
+                                onChange={onChange}
+                                />
+                    </div> 
                     <div className="campo-form">
                         <label htmlFor="email">Email</label>
                         <input 

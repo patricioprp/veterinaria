@@ -10,6 +10,11 @@ const columnas = [
         sortable: true
     },
     {
+        name: 'Nombre',
+        selector:  (row, i) => row.nombre,
+        sortable: true
+    },
+    {
         name: 'Correo',
         selector:  (row, i) => row.email,
         sortable: true

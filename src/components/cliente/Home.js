@@ -2,7 +2,10 @@ import React, {useContext,useEffect} from 'react';
 import Sidebar from '../cliente/Sidebar';
 import Barra from '../layaout/Barra';
 import AuthContext from '../../context/autenticacion/authContext';
-
+import ClienteContext from '../../context/cliente/clienteContext';
+import NuevaMascota from './NuevaMascota';
+import MisMascotas from './MisMascotas';
+import ListadoCombo from './ListadoCombo';
 
 
 const Home = () => {
@@ -10,10 +13,14 @@ const Home = () => {
     const authContext = useContext(AuthContext);
     const {usuarioAutenticado } = authContext;
 
+    //Extrar informacion del cliente
+    const clienteContext = useContext(ClienteContext);
+    const {mostrar_form_mascota,mostrar_mis_mascotas,mostrar_mis_pedidos} = clienteContext;
 
-    // useEffect(() => {
-    //   usuarioAutenticado()
-    // }, [])
+
+    useEffect(() => {
+      usuarioAutenticado()
+    }, [])
     
     return ( 
         <div className='contenedor-app'>
@@ -21,11 +28,9 @@ const Home = () => {
             <div className='seccion-principal'>
                 <Barra />
                 <main>
-                    
-                {/* <FormTarea />
-                    <div className='contenedor-tareas'>
-                        <ListadoTarea />
-                    </div> */}
+                 {mostrar_form_mascota ? <NuevaMascota /> : null}
+                 {mostrar_mis_mascotas? <MisMascotas /> : null}
+                 {mostrar_mis_pedidos ? <ListadoCombo /> : null}
                 </main>
             </div>
         </div>
