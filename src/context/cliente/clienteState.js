@@ -143,6 +143,12 @@ const ClienteState = props => {
             }
         }else{
             const pedido_seteado = setPedidoPerro(mascota)
+            try{
+                const respuesta = await clienteAxios.post('/pedidos',pedido_seteado)
+                console.log(respuesta)
+            }catch(error){
+                console.log(error)
+            }
         }
     }
 
@@ -161,13 +167,21 @@ const ClienteState = props => {
 
     const setPedidoPerro = (perro) => {
         const pedido = {};
+        pedido.alimento = perro.peso * 0.8;
+        pedido.usuario_id = perro.usuario_id;
+        pedido.mascota_id = perro.id;
+        pedido.estado_id = "1" ;
+        const edad = calcularEdad(perro.fecha_nacimiento);
+        (perro.esterelizado == "SI" && edad > 5) ? pedido.complemento_extra = "SI" : pedido.complemento_extra = "NO";
+        pedido.complemento = Math.trunc(edad/3);
         return pedido
     }
 
     const calcularEdad = (fecha_nacimiento) => {
-        var m = moment(fecha_nacimiento, "DD-MM-YYYY");
-        //  console.log('You are '+m.fromNow() + ' old'); // You are 23 years ago old
-        return m.fromNow()
+        var now = moment().format("DD-MM-YYYY");
+        var now_parse = moment(now,"DD-MM-YYYY");
+        var fecha_nac_parse = moment(fecha_nacimiento, "DD-MM-YYYY");
+        return now_parse.diff(fecha_nac_parse, 'years');
     }
 
 

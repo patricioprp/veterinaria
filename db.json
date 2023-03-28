@@ -172,7 +172,7 @@
     {
       "nombre": "Toby",
       "especie_id": "1",
-      "fecha_nacimiento": "26/03/2010",
+      "fecha_nacimiento": "26/03/2020",
       "peso": "0.04",
       "esterelizado": "si",
       "usuario_id": 7,
@@ -189,9 +189,9 @@
     },
     {
       "nombre": "Firulais",
-      "especie_id": "1",
-      "fecha_nacimiento": "26/03/2023",
-      "peso": "0.04",
+      "especie_id": "2",
+      "fecha_nacimiento": "26/03/2016",
+      "peso": "5.0",
       "esterelizado": "si",
       "usuario_id": 7,
       "id": 5
@@ -261,6 +261,94 @@
       "complemento": "NO",
       "complemento_extra": "SI",
       "id": 5
+    },
+    {
+      "alimento": 0.02,
+      "usuario_id": 7,
+      "mascota_id": 5,
+      "estado_id": "1",
+      "complemento": "NO",
+      "complemento_extra": "SI",
+      "id": 6
+    },
+    {
+      "alimento": 0.02,
+      "usuario_id": 7,
+      "mascota_id": 5,
+      "estado_id": "1",
+      "complemento": "NO",
+      "complemento_extra": "SI",
+      "id": 7
+    },
+    {
+      "alimento": 0.02,
+      "usuario_id": 7,
+      "mascota_id": 5,
+      "estado_id": "1",
+      "complemento": "NO",
+      "complemento_extra": "SI",
+      "id": 8
+    },
+    {
+      "alimento": 0.02,
+      "usuario_id": 7,
+      "mascota_id": 3,
+      "estado_id": "1",
+      "complemento": "SI",
+      "complemento_extra": "SI",
+      "id": 9
+    },
+    {
+      "alimento": 0.02,
+      "usuario_id": 7,
+      "mascota_id": 3,
+      "estado_id": "1",
+      "complemento": "NO",
+      "complemento_extra": "SI",
+      "id": 10
+    },
+    {
+      "alimento": 0.02,
+      "usuario_id": 7,
+      "mascota_id": 3,
+      "estado_id": "1",
+      "complemento": "NO",
+      "complemento_extra": "SI",
+      "id": 11
+    },
+    {
+      "alimento": 0.02,
+      "usuario_id": 7,
+      "mascota_id": 3,
+      "estado_id": "1",
+      "complemento": "NO",
+      "complemento_extra": "SI",
+      "id": 12
+    },
+    {
+      "alimento": 4,
+      "usuario_id": 7,
+      "mascota_id": 5,
+      "estado_id": "1",
+      "id": 13
+    },
+    {
+      "alimento": 4,
+      "usuario_id": 7,
+      "mascota_id": 5,
+      "estado_id": "1",
+      "complemento_extra": "NO",
+      "complemento": 3,
+      "id": 14
+    },
+    {
+      "alimento": 4,
+      "usuario_id": 7,
+      "mascota_id": 5,
+      "estado_id": "1",
+      "complemento_extra": "NO",
+      "complemento": 2,
+      "id": 15
     }
   ],
   "estados_pedido": [
