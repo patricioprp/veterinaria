@@ -4,7 +4,7 @@
       "email": "vendedor@gmail.com",
       "nombre": "Juan",
       "password": "$2a$10$0QH8wq1cVHCmMX1KMCgAsefKDtEEl3ntQfWv/FWQMOCF7Lg5l1Mty",
-      "tipo": "1",
+      "tipo": "2",
       "id": 1
     },
     {
@@ -266,7 +266,7 @@
       "alimento": 0.02,
       "usuario_id": 7,
       "mascota_id": 5,
-      "estado_id": "1",
+      "estado_id": "2",
       "complemento": "NO",
       "complemento_extra": "SI",
       "id": 6
@@ -275,7 +275,7 @@
       "alimento": 0.02,
       "usuario_id": 7,
       "mascota_id": 5,
-      "estado_id": "1",
+      "estado_id": "2",
       "complemento": "NO",
       "complemento_extra": "SI",
       "id": 7
@@ -284,7 +284,7 @@
       "alimento": 0.02,
       "usuario_id": 7,
       "mascota_id": 5,
-      "estado_id": "1",
+      "estado_id": "2",
       "complemento": "NO",
       "complemento_extra": "SI",
       "id": 8
@@ -293,7 +293,7 @@
       "alimento": 0.02,
       "usuario_id": 7,
       "mascota_id": 3,
-      "estado_id": "1",
+      "estado_id": "2",
       "complemento": "SI",
       "complemento_extra": "SI",
       "id": 9
