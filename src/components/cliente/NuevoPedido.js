@@ -1,18 +1,43 @@
-import React,{useContext,useEffect} from 'react';
+import React,{useContext,useEffect,useState} from 'react';
 import ClienteContext from '../../context/cliente/clienteContext';
 import alertaContext from '../../context/alertas/alertaContext';
 
 const NuevoPedido = () => {
 
     const clienteContext = useContext(ClienteContext)
-    const{obtenerMisMascotas,mascotas} = clienteContext
+    const{obtenerMisMascotas,mascotas,registrarPedido} = clienteContext
 
     const alertasContext = useContext(alertaContext);
     const {alerta,mostrarAlerta} = alertasContext;
 
+    const [mascota,guardarMascota] =  useState({
+      mascota_id:''
+    });
+    const {mascota_id} = mascota;
+
+    const onChange = e =>{
+        guardarMascota({
+            ...mascota,
+            [e.target.name]:e.target.value
+        });
+        //  console.log(mascota)
+    }
+
     useEffect(() => {
         obtenerMisMascotas(JSON.parse(localStorage.getItem('user')).id)
     }, [])
+
+
+    const onSubmit = e =>{
+        e.preventDefault();
+        if(mascota_id.trim() === ''){
+            mostrarAlerta('Todos los campos Mascota es obligatorio','alerta-error');
+            return
+        }
+        const mascota_seleccionada = mascotas.filter(mascot => mascot.id == mascota.mascota_id)[0]
+
+         registrarPedido(mascota_seleccionada);
+    }
     
     return(
         <>
@@ -21,7 +46,7 @@ const NuevoPedido = () => {
                 <h1>Crear Pedido</h1>
 
                 <form
-                    // onSubmit={onSubmit}
+                     onSubmit={onSubmit}
                 >
                     <div className="campo-form">
                         <label htmlFor="mascota_id">mascota</label>
@@ -29,8 +54,8 @@ const NuevoPedido = () => {
                         name="mascota_id" 
                         id="mascota_id" 
                         type="text" 
-                        // value={mascota_id} 
-                        // onChange={onChange}
+                        value={mascota_id} 
+                        onChange={onChange}
                         >
                         <option key = "0" value = "" > Seleccione una opcion </option>
                             {mascotas ?

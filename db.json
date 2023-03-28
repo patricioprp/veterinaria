@@ -172,7 +172,7 @@
     {
       "nombre": "Toby",
       "especie_id": "1",
-      "fecha_nacimiento": "2023-03-26",
+      "fecha_nacimiento": "26/03/2010",
       "peso": "0.04",
       "esterelizado": "si",
       "usuario_id": 7,
@@ -181,11 +181,11 @@
     {
       "nombre": "Col",
       "especie_id": "1",
-      "fecha_nacimiento": "2023-03-26",
+      "fecha_nacimiento": "26/03/2017",
       "peso": "0.04",
       "esterelizado": "si",
       "usuario_id": 7,
-      "id": 4
+      "id": "4"
     },
     {
       "nombre": "Firulais",
@@ -198,7 +198,7 @@
     },
     {
       "nombre": "Lupa",
-      "especie_id": "1",
+      "especie_id": "2",
       "fecha_nacimiento": "20/03/2026",
       "peso": "0.04",
       "esterelizado": "si",
@@ -234,6 +234,33 @@
       "complemento": 1,
       "complemento_extra": "SI",
       "estado_id": "1"
+    },
+    {
+      "alimento": 0.02,
+      "usuario_id": 7,
+      "mascota_id": 3,
+      "estado_id": "1",
+      "complemento": "NO",
+      "complemento_extra": "SI",
+      "id": 3
+    },
+    {
+      "alimento": 0.02,
+      "usuario_id": 7,
+      "mascota_id": 3,
+      "estado_id": "1",
+      "complemento": "NO",
+      "complemento_extra": "SI",
+      "id": 4
+    },
+    {
+      "alimento": 0.02,
+      "usuario_id": 7,
+      "mascota_id": 3,
+      "estado_id": "1",
+      "complemento": "NO",
+      "complemento_extra": "SI",
+      "id": 5
     }
   ],
   "estados_pedido": [

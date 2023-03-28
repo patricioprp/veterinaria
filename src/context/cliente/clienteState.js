@@ -2,6 +2,7 @@ import React,{useReducer} from "react";
 import clienteReducer from "./clienteReducer";
 import clienteContext from "./clienteContext";
 import clienteAxios from "../../config/axios";
+import moment from 'moment';
 
 import { 
     OBTENER_DUENIOS_MASCOTAS,
@@ -131,6 +132,44 @@ const ClienteState = props => {
         }
     }
 
+    const registrarPedido = async(mascota) => {
+        if(mascota.especie_id === '1'){
+            const pedido_seteado = setPedidoGato(mascota)
+            try{
+                const respuesta = await clienteAxios.post('/pedidos',pedido_seteado)
+                console.log(respuesta)
+            }catch(error){
+                console.log(error)
+            }
+        }else{
+            const pedido_seteado = setPedidoPerro(mascota)
+        }
+    }
+
+
+    const setPedidoGato = (gato) => {
+
+        const pedido = {};
+        pedido.alimento = gato.peso/2;
+        pedido.usuario_id = gato.usuario_id;
+        pedido.mascota_id = gato.id;
+        pedido.estado_id = "1" ;
+        calcularEdad(gato.fecha_nacimiento) > 5 ? pedido.complemento = "SI" : pedido.complemento = "NO";
+        gato.esterelizado == "si" ? pedido.complemento_extra = "SI" : pedido.complemento_extra = "NO";
+        return pedido
+    }
+
+    const setPedidoPerro = (perro) => {
+        const pedido = {};
+        return pedido
+    }
+
+    const calcularEdad = (fecha_nacimiento) => {
+        var m = moment(fecha_nacimiento, "DD-MM-YYYY");
+        //  console.log('You are '+m.fromNow() + ' old'); // You are 23 years ago old
+        return m.fromNow()
+    }
+
 
 
     return(
@@ -152,7 +191,8 @@ const ClienteState = props => {
             obtenerMisMascotas,
             mostrarMisMascotas,
             mostrarMisPedidos,
-            obtenerMisPedidos
+            obtenerMisPedidos,
+            registrarPedido
          }}>
             {props.children}
         </clienteContext.Provider>
